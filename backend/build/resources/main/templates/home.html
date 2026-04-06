@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teamlovers Portfolio</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main>
+  <section class="hero">
+    <div class="hero-card">
+      <p class="eyebrow">AI MUSIC DESIGN AND LOVE</p>
+      <h1>Teamlovers Portfolio</h1>
+      <p class="hero-desc">
+        코드와 음악과 디자인을 사랑하는 사람의 작업들을 담아낸 공간.
+        포트폴리오, 프로젝트, 그리고 누군가의 편지가 머무는 웹사이트.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/projects" class="btn btn-primary">프로젝트 보기</a>
+        <a href="/letters/new" class="btn btn-secondary">편지 쓰기</a>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
