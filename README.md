@@ -1,2 +1,2 @@
 # ear-showroom
-음악 버전 왓챠피디아
+teamlover's portfolio and pedia of music ver.
