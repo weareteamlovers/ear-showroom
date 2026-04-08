@@ -5,8 +5,8 @@ export default function RevealSection({ className = "", children }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const target = ref.current;
-    if (!target) return;
+    const node = ref.current;
+    if (!node) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -16,17 +16,18 @@ export default function RevealSection({ className = "", children }) {
           }
         });
       },
-      { threshold: 0.18 }
+      { threshold: 0.15 }
     );
 
-    observer.observe(target);
+    observer.observe(node);
+
     return () => observer.disconnect();
   }, []);
 
   return (
     <section
       ref={ref}
-      className={`reveal-section ${visible ? "visible" : ""} ${className}`}
+      className={`reveal-block ${visible ? "is-visible" : ""} ${className}`}
     >
       {children}
     </section>

@@ -1,19 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import ProjectsPage from "./pages/ProjectsPage";
-import ContactPage from "./pages/ContactPage";
-import LetterPage from "./pages/LetterPage";
+import SiteHeader from "./components/SiteHeader";
+import EditorialHomePage from "./pages/EditorialHomePage";
+import ProjectsArchivePage from "./pages/ProjectsArchivePage";
+import ContactDirectoryPage from "./pages/ContactDirectoryPage";
+import LetterComposePage from "./pages/LetterComposePage";
 import AdminInboxPage from "./pages/AdminInboxPage";
+import AdminLetterDetailPage from "./pages/AdminLetterDetailPage";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <SiteHeader />
+
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/letter" element={<LetterPage />} />
+        <Route path="/" element={<EditorialHomePage />} />
+        <Route path="/projects" element={<ProjectsArchivePage />} />
+        <Route path="/contact" element={<ContactDirectoryPage />} />
+        <Route path="/letter" element={<LetterComposePage />} />
         <Route path="/admin/inbox" element={<AdminInboxPage />} />
+        <Route path="/admin/inbox/:id" element={<AdminLetterDetailPage />} />
       </Routes>
     </BrowserRouter>
   );

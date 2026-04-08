@@ -1,6 +1,11 @@
 {
   "name": "teamlovers-portfolio",
   "image": "mcr.microsoft.com/devcontainers/java:1-17-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
   "forwardPorts": [8080],
   "portsAttributes": {
     "8080": {

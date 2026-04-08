@@ -29,3 +29,9 @@ export async function fetchLetters() {
   if (!res.ok) throw new Error("편지 목록을 불러오지 못했습니다.");
   return res.json();
 }
+
+export async function fetchLetterDetail(id) {
+  const res = await fetch(`${API_BASE}/admin/letters/${id}`);
+  if (!res.ok) throw new Error("편지 상세를 불러오지 못했습니다.");
+  return res.json();
+}
